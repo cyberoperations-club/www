@@ -1,0 +1,131 @@
+:root {
+    --text: #FFFFFF;
+    --background: #111111;
+    --background2: #272727;
+    --background3: #424242;
+    --code: #1D8E1D;
+    --primary: #B40235;
+    --secondary: #FDBF55;
+    --accent: #FF5400;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+    color: var(--text);
+}
+
+html, body {
+    height: 100%;
+}
+
+header {
+    margin: 0 auto 8px;
+    width: 100%;
+    max-width: 1000px;
+    height: 75px;
+    background: var(--background2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary);
+    transition: color .25s ease-in-out;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+li {
+    list-style: none;
+}
+
+footer {
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--background2);
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: 2px solid var(--background3);
+    border-bottom: none;
+    text-align: end;
+    padding: 20px;
+    line-height: 18px;
+}
+
+section h1 {
+    color: var(--code);
+    margin-bottom: 8px;
+}
+
+section h1:before {
+    content: "//";
+}
+
+section:not(:first-child) {
+    margin-top: 20px;
+}
+
+#nav-bar li {
+    display: inline;
+    padding: 0 15px;
+    text-transform: lowercase;
+    font-weight: bold;
+    color: var(--text);
+}
+
+#nav-bar li:before {
+    content: "./";
+}
+
+#logo-div {
+    width: 100px;
+}
+
+#logo-div img {
+    width: 32px;
+    height: 32px;
+}
+
+#container {
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 1000px;
+    height: calc(100% - 200px);
+    background: var(--background2);
+}
+
+.list:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.date {
+    opacity: 75%;
+    font-size: 10px;
+    line-height: 12px;
+    margin-right: 10px;
+}
+
+.box {
+    border: 2px solid var(--background3);
+}
+
+header.box {
+    border-top: none;
+}
