@@ -58,6 +58,11 @@ code {
     flex: auto;
 }
 
+img {
+    width: var(--logo-size);
+    height: var(--logo-size);
+}
+
 a:hover {
     color: var(--primary);
 }
@@ -93,6 +98,11 @@ section h1:before {
     content: "# ";
 }
 
+#nav-bar ul {
+    display: flex;
+    align-items: center;
+}
+
 #nav-bar li {
     display: inline;
     padding: 0 15px;
@@ -101,8 +111,9 @@ section h1:before {
     color: var(--text);
 }
 
-#nav-bar li:before {
+#nav-bar li:not(:nth-child(3)):before {
     content: "./";
+    line-height: 100%;
 }
 
 #logo-div {
@@ -216,12 +227,13 @@ section.box {
     }
 
     body {
-        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
 
     header {
-        flex-direction: column;
-        min-height: 150px;
+        padding: 10px 0;
+        min-height: 100px;
         max-width: 90%;
     }
 
@@ -233,17 +245,18 @@ section.box {
         text-align: center;
         font-size: 10px;
     }
-
-    #logo-div {
-        width: fit-content;
-    }
     
     #nav-bar {
         width: 100%;
     }
 
     #nav-bar ul {
+        flex-direction: column;
         width: 100%;
+    }
+
+    #nav-bar li:nth-child(3) {
+        display: none;
     }
 
     #nav-bar li {
@@ -253,7 +266,11 @@ section.box {
         width: 100%;
     }
 
-    #nav-bar li:nth-child(odd) {
+    #nav-bar li:nth-child(1) {
+        background-color: var(--background3);
+    }
+
+    #nav-bar li:nth-child(4) {
         background-color: var(--background3);
     }
 
