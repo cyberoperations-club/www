@@ -1,0 +1,95 @@
+/* Universal */
+:root {
+    --text: #FFFFFF;
+    --background: #0b0b0b;
+    --background2: #272727;
+    --background3: #424242;
+    --primary: #D54E53;
+    --secondary: #FDBF55;
+    --accent: #FF5400;
+    --bottom-offset: 515px;            /* Controls height of bottom container */
+    --logo-offset: 100px;              /* Controls how far left the logo is from rest of the navbar */
+    --logo-size: 32px;                 /* Controls how big the logo is (width & height) */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text);
+}
+
+/* Elements */
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    background-color: var(--background)
+}
+
+/* Classes */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.error {
+    font-size: 100px; 
+}
+
+
+.home-button {
+    margin-top: 16px;
+    background-color: var(--background);
+    width: 200px;
+    border-radius: 0;
+    border: 1px solid var(--text);
+    padding: 2px;
+}
+
+.home-button:hover {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+.home-button:active {
+    border: 1px solid green;
+    color: green;
+    background-color: var(--background);
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: .05em solid var(--text);
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation:
+        typing 3.0s steps(54, end),
+        blink-caret .75s step-end infinite;
+}
+
+.type-container {
+    width: fit-content;
+}
+
+/* ID's */
+
+/* Anims */
+
+@keyframes typing {
+    from {width: 0%}
+    to {width: 100%}
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent}
+    50% {border-color: var(--text);}
+}
