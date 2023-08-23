@@ -35,6 +35,7 @@ header {
     width: 100%;
     max-width: 1000px;
     height: 75px;
+    min-height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +46,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 main {
@@ -55,11 +57,6 @@ main {
 a {
     text-decoration: none;
     color: var(--secondary);
-}
-
-img {
-    width: var(--logo-size);
-    height: var(--logo-size);
 }
 
 a:hover {
@@ -82,7 +79,7 @@ footer {
 
 section h1 {
     color: var(--primary);
-    margin-bottom: 8px;
+    padding-bottom: 10px;
 }
 
 section h1:before {
@@ -97,10 +94,6 @@ footer.box {
     border-bottom: none;
 }
 
-section.box {
-    padding: 10px;
-}
-
 .bottom section.box {
     width: 100%;
 }
@@ -109,9 +102,9 @@ section.box {
     padding: 0;
 }
 
-.bottom.container > .box > h1 {
-    margin-left: 10px;
-    margin-top: 10px;
+.box > h1 {
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 /* Classes */
@@ -125,6 +118,7 @@ section.box {
 }
 
 .blog-description {
+    padding: 3px 0;
     opacity: 75%;
     font-size: 12px;
 }
@@ -176,17 +170,12 @@ section.box {
     color: var(--text);
 }
 
-/* Every navbar element save for the icon gets a ./ */
-#nav-bar li:not(:nth-child(3)):before {
+#nav-bar li:not(:first-child):before {
     content: "./";
     line-height: 100%;
 }
 
-#logo-div {
-    width: var(--logo-offset);
-}
-
-#logo-div img {
+#logo {
     width: var(--logo-size);
     height: var(--logo-size);
 }
@@ -195,6 +184,10 @@ section.box {
     margin-bottom: 10px;
     height: fit-content;
     overflow: auto;
+}
+
+#introduction p {
+    padding: 0 10px 10px 10px;
 }
 
 #footer-text {
@@ -206,15 +199,15 @@ section.box {
     max-width: 330px;
 }
 
-#blog-posts {
-    max-width:  660px;
+#events h1 {
+    margin-bottom: 5px;
 }
 
-#blog-posts ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: calc(100% - 56px);
+#blog-posts {
+    max-width:  660px;
+    min-height: 100%;
+    height: 100%;
+    max-height: 100%;
 }
 
 #blog-posts li {
@@ -265,7 +258,7 @@ section.box {
 
     header {
         padding: 10px 0;
-        min-height: 100px;
+        min-height: 130px;
         max-width: 90%;
     }
 
@@ -277,6 +270,11 @@ section.box {
         text-align: center;
         font-size: 10px;
     }
+
+    #events {
+        max-width: 100%;
+        margin-right: 0;
+    }
     
     #nav-bar {
         width: 100%;
@@ -287,10 +285,6 @@ section.box {
         width: 100%;
     }
 
-    #nav-bar li:nth-child(3) {
-        display: none;
-    }
-
     #nav-bar li {
         display: block;
         padding: 0;
@@ -298,16 +292,15 @@ section.box {
         width: 100%;
     }
 
-    #nav-bar li:nth-child(1) {
+    #nav-bar li:first-child {
+        margin-bottom: 6px;
+    } 
+
+    #nav-bar li:not(:first-child) {
+        margin-bottom: 4px;
+    }
+
+    #nav-bar li:nth-child(even) {
         background-color: var(--background3);
     }
-
-    #nav-bar li:nth-child(4) {
-        background-color: var(--background3);
-    }
-
-    #nav-bar li:not(:last-child) {
-        margin-bottom: 3px;
-    }
-
 }
