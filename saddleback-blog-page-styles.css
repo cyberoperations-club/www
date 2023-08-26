@@ -6,6 +6,9 @@
     --background3: #424242;
     --primary: #D54E53;
     --secondary: #FDBF55;
+    --accent: #FF5400;
+    --bottom-offset: 515px;            /* Controls height of bottom container */
+    --logo-offset: 100px;              /* Controls how far left the logo is from rest of the navbar */
     --logo-size: 32px;                 /* Controls how big the logo is (width & height) */
 }
 
@@ -84,18 +87,6 @@ footer.box {
     border-bottom: none;
 }
 
-.container li:nth-child(even) {
-    background-color: var(--background3)
-}
-
-.container li {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 2px 10px;
-    text-transform: lowercase;
-}
-
 /* Classes */
 
 .box {
@@ -106,15 +97,36 @@ footer.box {
 .container {
     margin: 0 auto;
     max-width: 1000px;
-    height: 100%;
 }
 
-.update {
-    font-size: 10px;
+.details {
     opacity: 75%;
+    font-size: 14px;
+    margin: 0 0 10px 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+}
+
+.details p {
+    margin-left: 10px;
+}
+
+.details p:not(:last-child):after {
+    content: " • ";
+}
+
+.img-div {
+    display: flex;
+}
+
+.top {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+
+.bottom {
+    height: 100%;
+    padding: 10px;
 }
 
 /* ID's */
@@ -143,6 +155,11 @@ footer.box {
     height: var(--logo-size);
 }
 
+#article-img {
+    max-width: 400px;
+    margin: 0 10px 10px 0;
+}
+
 /* Mobile & Screen Options */
 
 @media (max-width: 850px) {
@@ -165,14 +182,17 @@ footer.box {
         max-width: 90%;
     }
 
+    .img-div {
+        flex-direction: column;
+    }
+
+    #article-img {
+        max-width: 100%;
+    }
+
     #footer-text p {
         text-align: center;
         font-size: 10px;
-    }
-
-    #events {
-        max-width: 100%;
-        margin-right: 0;
     }
     
     #nav-bar {

@@ -6,9 +6,6 @@
     --background3: #424242;
     --primary: #D54E53;
     --secondary: #FDBF55;
-    --accent: #FF5400;
-    --bottom-offset: 515px;            /* Controls height of bottom container */
-    --logo-offset: 100px;              /* Controls how far left the logo is from rest of the navbar */
     --logo-size: 32px;                 /* Controls how big the logo is (width & height) */
 }
 
