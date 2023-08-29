@@ -1,4 +1,10 @@
-/* Universal */
+/*
+This CSS file is for the consistent, universal theming
+of each page of the Saddleback Cybersecurity Club.
+*/
+
+/* || General Style */
+
 :root {
     --text: #FFFFFF;
     --background: #0b0b0b;
@@ -6,8 +12,7 @@
     --background3: #424242;
     --primary: #D54E53;
     --secondary: #FDBF55;
-    --accent: #FF5400;
-    --logo-size: 32px;                 /* Controls how big the logo is (width & height) */
+    --logo-size: 32px;
 }
 
 * {
@@ -18,20 +23,37 @@
     color: var(--text);
 }
 
-/* Elements */
+li, p, span, code {
+    font-size: 15px;
+}
 
 html, body {
     height: 100%;
 }
 
-a {
-    text-decoration: none;
-    color: var(--secondary);
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
 }
 
-a:hover {
-    color: var(--primary);
+.box {
+    border: 2px solid var(--background3);
+    background-color: var(--background2);
 }
+
+/* Artificial box padding is necessary, as the boxes have no 
+   inherent padding due to formatting concerns with striped */
+.box > h1 {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.striped:nth-child(even) {
+    background-color: var(--background3)
+}
+
+/* || Header and Footer */
 
 header {
     margin: 0 auto 10px;
@@ -44,33 +66,6 @@ header {
     justify-content: center;
 }
 
-h1 {
-    padding: 10px 0 10px 10px;
-    color: var(--primary);
-}
-
-h1:before {
-    content: "# ";
-    color: var(--primary);
-}
-
-header.box {
-    border-top: none;
-}
-
-body {
-    background-color: var(--background);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-main {
-    flex: 1;
-}
-
 footer {
     width: 100%;
     max-width: 1000px;
@@ -81,53 +76,19 @@ footer {
     line-height: 18px;
 }
 
+header.box {
+    border-top: none;
+}
+
 footer.box {
     border-bottom: none;
 }
 
-/* Classes */
-
-.box {
-    border: 2px solid var(--background3);
-    background-color: var(--background2);
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 1000px;
-}
-
-.details {
+#footer-text {
     opacity: 75%;
-    font-size: 14px;
-    margin: 0 0 10px 10px;
-    display: flex;
 }
 
-.details p {
-    margin-left: 10px;
-}
-
-.details p:not(:last-child):after {
-    content: " • ";
-}
-
-.img-div {
-    display: flex;
-}
-
-.top {
-    width: 100%;
-    height: fit-content;
-    margin-bottom: 10px;
-}
-
-.bottom {
-    height: 100%;
-    padding: 10px;
-}
-
-/* ID's */
+/* || Navigation Bar */
 
 #nav-bar ul {
     display: flex;
@@ -136,7 +97,6 @@ footer.box {
 
 #nav-bar li {
     display: inline;
-    font-size: 15px;
     padding: 0 15px;
     text-transform: lowercase;
     font-weight: bold;
@@ -153,12 +113,44 @@ footer.box {
     height: var(--logo-size);
 }
 
-#article-img {
-    max-width: 400px;
-    margin: 0 10px 10px 0;
+/* || Body */
+
+body {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-/* Mobile & Screen Options */
+main {
+    flex: 1;
+}
+
+section h1 {
+    color: var(--primary);
+    padding-bottom: 10px;
+}
+
+section h1:before {
+    content: "# ";
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+li {
+    list-style: none;
+}
+
+/* || Screen Scaling Options */
 
 @media (max-width: 850px) {
     .container {
@@ -178,14 +170,6 @@ footer.box {
 
     footer {
         max-width: 90%;
-    }
-
-    .img-div {
-        flex-direction: column;
-    }
-
-    #article-img {
-        max-width: 100%;
     }
 
     #footer-text p {
