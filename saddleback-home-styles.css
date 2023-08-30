@@ -123,6 +123,10 @@
         height: 100%;
     }
 
+    #blog-posts {
+        max-width: 100%;
+    }
+
     #events {
         margin-right: 10px;
     }

@@ -103,9 +103,8 @@ footer.box {
     color: var(--text);
 }
 
-#nav-bar li:not(:first-child):before {
+.nav-link:before {
     content: "./";
-    line-height: 100%;
 }
 
 #logo {

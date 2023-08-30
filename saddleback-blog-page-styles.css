@@ -44,7 +44,7 @@ header {
     justify-content: center;
 }
 
-h1 {
+#blog-title {
     padding: 10px 0 10px 10px;
     color: var(--primary);
 }
@@ -52,49 +52,6 @@ h1 {
 h1:before {
     content: "# ";
     color: var(--primary);
-}
-
-header.box {
-    border-top: none;
-}
-
-body {
-    background-color: var(--background);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-main {
-    flex: 1;
-}
-
-footer {
-    width: 100%;
-    max-width: 1000px;
-    height: 40px;
-    margin: 10px auto 0px;
-    text-align: end;
-    padding: 10px;
-    line-height: 18px;
-}
-
-footer.box {
-    border-bottom: none;
-}
-
-/* Classes */
-
-.box {
-    border: 2px solid var(--background3);
-    background-color: var(--background2);
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 1000px;
 }
 
 .details {
@@ -116,8 +73,7 @@ footer.box {
     display: flex;
 }
 
-.top {
-    width: 100%;
+#title-box {
     height: fit-content;
     margin-bottom: 10px;
 }
@@ -127,32 +83,6 @@ footer.box {
     padding: 10px;
 }
 
-/* ID's */
-
-#nav-bar ul {
-    display: flex;
-    align-items: center;
-}
-
-#nav-bar li {
-    display: inline;
-    font-size: 15px;
-    padding: 0 15px;
-    text-transform: lowercase;
-    font-weight: bold;
-    color: var(--text);
-}
-
-#nav-bar li:not(:first-child):before {
-    content: "./";
-    line-height: 100%;
-}
-
-#logo {
-    width: var(--logo-size);
-    height: var(--logo-size);
-}
-
 #article-img {
     max-width: 400px;
     margin: 0 10px 10px 0;
@@ -160,64 +90,13 @@ footer.box {
 
 /* Mobile & Screen Options */
 
-@media (max-width: 850px) {
-    .container {
-        max-width: 90%;
-    }
-
-    body {
-        overflow-x: hidden;
-        overflow-y: scroll;
-    }
-
-    header {
-        padding: 10px 0;
-        min-height: 130px;
-        max-width: 90%;
-    }
-
-    footer {
-        max-width: 90%;
-    }
-
+@media (max-width: 1000px) {
     .img-div {
         flex-direction: column;
     }
 
     #article-img {
         max-width: 100%;
-    }
-
-    #footer-text p {
-        text-align: center;
-        font-size: 10px;
-    }
-    
-    #nav-bar {
-        width: 100%;
-    }
-
-    #nav-bar ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    #nav-bar li {
-        display: block;
-        padding: 0;
-        text-align: center;
-        width: 100%;
-    }
-
-    #nav-bar li:first-child {
-        margin: 6px 0;
-    } 
-
-    #nav-bar li:not(:first-child) {
-        margin-bottom: 4px;
-    }
-
-    #nav-bar li:nth-child(even) {
-        background-color: var(--background3);
+        margin-right: 0;
     }
 }

@@ -96,6 +96,10 @@ footer.box {
     text-transform: lowercase;
 }
 
+.container a:before {
+    content: "./";
+}
+
 /* Classes */
 
 .box {
@@ -115,32 +119,6 @@ footer.box {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-}
-
-/* ID's */
-
-#nav-bar ul {
-    display: flex;
-    align-items: center;
-}
-
-#nav-bar li {
-    display: inline;
-    font-size: 15px;
-    padding: 0 15px;
-    text-transform: lowercase;
-    font-weight: bold;
-    color: var(--text);
-}
-
-#nav-bar li:not(:first-child):before {
-    content: "./";
-    line-height: 100%;
-}
-
-#logo {
-    width: var(--logo-size);
-    height: var(--logo-size);
 }
 
 /* Mobile & Screen Options */
