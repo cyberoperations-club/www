@@ -1,56 +1,5 @@
-/* Universal */
-:root {
-    --text: #FFFFFF;
-    --background: #0b0b0b;
-    --background2: #272727;
-    --background3: #424242;
-    --primary: #D54E53;
-    --secondary: #FDBF55;
-    --accent: #FF5400;
-    --logo-size: 32px;                 /* Controls how big the logo is (width & height) */
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Inconsolata', monospace;
-    color: var(--text);
-}
-
-/* Elements */
-
-html, body {
-    height: 100%;
-}
-
-a {
-    text-decoration: none;
-    color: var(--secondary);
-}
-
-a:hover {
-    color: var(--primary);
-}
-
-header {
-    margin: 0 auto 10px;
-    width: 100%;
-    max-width: 1000px;
-    height: 75px;
-    min-height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #blog-title {
     padding: 10px 0 10px 10px;
-    color: var(--primary);
-}
-
-h1:before {
-    content: "# ";
     color: var(--primary);
 }
 
