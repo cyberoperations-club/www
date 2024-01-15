@@ -1,0 +1,27 @@
+{{- /* FIXME: Remove the hack */ -}}
+
+{{ define "head" }}
+<head>
+    {{- partial "head.html" -}}
+    <link rel="stylesheet" href="/css/index.css"/>
+</head>
+{{ end }}
+
+{{ define "intro" }}
+
+{{- partial "introduction.html" -}}
+
+{{ end }}
+
+{{ define "main" }}
+
+<div class="bottom container">
+    <div class="sidebar">
+        {{- partial "events.html" . -}}
+        {{- partial "competitions.html" -}}
+    </div>
+
+    {{- partial "blog-posts.html" -}}
+</div>
+
+{{ end }}

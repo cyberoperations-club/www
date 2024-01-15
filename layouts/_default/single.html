@@ -1,0 +1,23 @@
+{{ define "head" }}
+<head>
+    {{- partial "head.html" -}}
+    <link rel="stylesheet" href="/css/single.css"/>
+</head>
+{{ end }}
+
+{{ define "intro" }}
+<section class="box container" id="title-box">
+    <h1 id="blog-title">{{ .Title }}</h1>
+    <span class="details">
+        <p>Category</p>
+        <p>Date Uploaded</p>
+        <p>Author</p>
+    </span>
+</section>
+{{ end }}
+
+{{ define "main" }}
+<div class="bottom box container">
+    {{ .Content }}
+</div>
+{{ end }}

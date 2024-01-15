@@ -1,0 +1,74 @@
+{{ define "head" }}
+<head>
+    {{- partial "head.html" -}}
+        <link rel="stylesheet" href="list.css"/>
+</head>
+{{ end }}
+
+{{ define "intro" }}
+{{ end }}
+
+{{ define "main" }}
+<section class="bottom box container">
+    <h1>List</h1>
+    <ul id="resources-list">
+        <li class="striped">
+            <a href="./saddleback-home.html">Home</a>
+            <span class="details">
+                <span class="tag-span">
+                    <span class="tag technical">Technical</span>
+                </span>
+                <span class="author">Aleksei Sushko</span>
+                <span class="minor-detail">N/A</span>
+                <span class="minor-detail">8-25-2023</span>
+            </span>
+        </li>
+        <li class="striped">
+            <a href="./saddleback-blog-page.html">Blog</a>
+            <span class="details">
+                <span class="tag-span">
+                    <span class="tag technical">Technical</span>
+                    <span class="tag tutorial">Tutorial</span>
+                </span>
+                <span class="author">Author McAuthorson</span>
+                <span class="minor-detail">10 min.</span>
+                <span class="minor-detail">8-25-2023</span>
+            </span>
+        </li>
+        <li class="striped">
+            <a href="./saddleback-news.html">News</a>
+            <span class="details">
+                <span class="tag-span">
+                    <span class="tag personal">Personal</span>
+                    <span class="tag tutorial">Tutorial</span>
+                </span>
+                <span class="author">Notta Hacker</span>
+                <span class="minor-detail">20 min.</span>
+                <span class="minor-detail">8-25-2023</span>
+            </span>
+        </li>
+        <li class="striped">
+            <a href="./saddleback-list.html">Resources</a>
+            <span class="details">
+                <span class="tag-span">
+                    <span class="tag technical">Technical</span>
+                </span>
+                <span class="author">Man A. Jer</span>
+                <span class="minor-detail">5 min.</span>
+                <span class="minor-detail">8-25-2023</span>
+            </span>
+        </li>
+        <li class="striped"><a href="./saddleback-404.html">404-Page</a>
+            <span class="details">
+                <span class="tag-span">
+                    <span class="tag misc">Misc.</span>
+                </span>
+                <span class="author">Linus Linuxson</span>
+                <span class="minor-detail">N/A</span>
+                <span class="minor-detail">8-25-2023</span>
+            </span>
+        </li>
+    </ul>
+</section>
+    <!-- {{ .Content }} -->
+{{ end }}

@@ -1,0 +1,12 @@
+<section id="competitions" class="box sidesub">
+    <h1>Competitions</h1>
+    <ul>
+        <li class="small-list striped"><span class="date"></span><a href="{{ .RelPermalink }}">No competitions planned.</a></li>
+        <!-- {{ range where site.RegularPages "Type" "competitions" }} -->
+        <!--     {{ if gt (.Params.event_date | time.AsTime) now }} -->
+        <!--         {{ $eventDate := .Params.event_date | time.Format ":date_medium" }} -->
+        <!--         <li class="small-list striped"><span class="date">{{ $eventDate }}</span><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li> -->
+        <!--     {{ end }} -->
+        <!-- {{ end }} -->
+    </ul>
+</section>
